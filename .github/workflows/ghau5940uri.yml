@@ -34,10 +34,10 @@ jobs:
         ghauri --help
         if [[ -n "$target_url" ]]; then
           echo "Scanning URL"
-          ghauri -u "$target_url" -H "X-HackerOne-Research: ss82" --delay 0.166
+          ghauri -u "$target_url" -H "X-HackerOne-Research: ss82" --delay 1
         elif [[ -n "$target_req" ]]; then
           echo "No URL given, scanning request"
-          ghauri -r "$target_req" -H "X-HackerOne-Research: ss82" --delay 0.166
+          ghauri -r "$target_req" -H "X-HackerOne-Research: ss82" --delay 1
         else
           echo "Error: Both URL and request inputs are empty. Please provide at least one."
         exit 1
