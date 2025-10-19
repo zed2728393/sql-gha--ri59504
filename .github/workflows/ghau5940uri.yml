@@ -34,7 +34,8 @@ jobs:
         ghauri --help
         if [[ -n "$target_url" ]]; then
           echo "Scanning URL"
-          ghauri -u "$target_url" -H "X-HackerOne-Research: ss82" --delay 1
+          ghauri -u "$target_url" -H \ 
+          "Intigriti-Bug-Bounty: ID-10226f54c28c4a43b722424920c709dff1a49067004e8989d3dde9f4b7136ffa" --delay 1
         elif [[ -n "$target_req" ]]; then
           echo "No URL given, scanning request"
           ghauri -r "$target_req" -H "X-HackerOne-Research: ss82" --delay 1
@@ -43,7 +44,7 @@ jobs:
         exit 1
         fi
 
-
+#"X-HackerOne-Research: ss82"
 
 
 
